@@ -304,12 +304,12 @@ const swaggerOptions = {
                 email: 'tejesh.vempati19@gmail.com',
             },
         },
-        servers: [
-            {
-                url: `http://localhost:${process.env.PORT || 3000}`,
-                description: 'Local Development Server',
-            },
-        ],
+       servers: [
+    {
+        url: process.env.RENDER_EXTERNAL_URL || `http://localhost:${process.env.PORT || 3000}`,
+        description: 'API Server',
+    },
+],
     },
     apis: ['./routes/*.js'],
 };
